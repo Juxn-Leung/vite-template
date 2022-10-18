@@ -10,11 +10,15 @@
     "lint": "eslint ./src/**/*.{js,jsx,vue,ts,tsx} --fix"
   },
   "dependencies": {
+    "pinia": "^2.0.23",
+    "store": "^2.0.12",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
+    "@types/node": "^18.11.0",
+    "@types/store": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "@vitejs/plugin-vue": "^3.1.0",
