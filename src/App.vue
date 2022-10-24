@@ -1,20 +1,29 @@
-<script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
-import TestView from '@/components/TestView.vue'
-</script>
-
 <template>
-  <hello-world />
-  <test-view />
+  <fullscreen
+    v-model="isFullscreen"
+    fullscreen-class="fullscreen-class"
+    :exit-on-click-wrapper="false"
+  >
+    <main class="app-main">
+      <RouterView />
+    </main>
+  </fullscreen>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<script setup lang="ts">
+import { ref } from 'vue'
+import { RouterView } from 'vue-router'
+
+const isFullscreen = ref(false)
+</script>
+
+<style lang="scss">
+.app-main {
+  margin-top: 57px;
+  background: #f4f7fc;
+}
+.fullscreen-class {
+  background: #f4f7fc;
+  overflow-y: auto;
 }
 </style>
